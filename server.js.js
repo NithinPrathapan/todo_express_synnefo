@@ -19,7 +19,7 @@ app.use(express.static("public"));
 
 app.get("/", todoController.getTodo);
 app.post("/add", todoController.addTodo);
-app.post("/delete", todoController.deleteTodo);
+app.post("/delete/:id", todoController.deleteTodo);
 
 app.listen(3000, () => {
   console.log("server start listening on port 3000");
